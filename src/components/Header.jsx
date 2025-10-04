@@ -2,6 +2,7 @@ import React from 'react'
 import Search from './Search'
 import Browse from './Browse'
 import Home from './Home'
+import AddBook from './AddBook'
 
 const Header = () => {
   return (
@@ -12,11 +13,15 @@ const Header = () => {
           <h1 className=" text-3xl font-semibold">Online Library</h1>
           
         </div>
-        <nav className=' flex justify-start items-center w-[70%] '>
-            <ul className='flex gap-2.5  items-center w-[100%]'>
-                <li className=' flex items-center  w-[70%]'><Search/></li>
-                <li className=' flex items-center  w-[9%] '><Home/></li>
-                <li className=' flex items-center w-[21%]'><Browse/></li>
+        <nav className=' flex justify-end mr-4 items-center w-[70%] '>
+            <ul className='flex justify-between items-center '>
+                <li className=' flex items-center '><Search/></li>
+               <div className='flex w-[50%] justify-end gap-1.5 items-center '>
+                 <li className=' flex items-center  '><Home/></li>
+                <li className=' flex items-center '><Browse/></li>
+                 <li className=' flex items-center'><AddBook/></li>
+               </div>
+                
             </ul>
           
         </nav>
