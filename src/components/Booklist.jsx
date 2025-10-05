@@ -1,6 +1,7 @@
 import { useState } from "react"
 import books from "../utils/books.js"
-import BookCard from "./BookCard.jsx"
+
+import FictionBooks from "./FictionBooks.jsx"
 
 export default function Booklist()
 {
@@ -8,19 +9,25 @@ export default function Booklist()
     const [booksData,setBooksData]=useState(books)
     return(
 
-            booksData.map((item)=>{
 
+        <div className="flex flex-wrap justify-center items-center w-[100%]">
+            {
+                booksData.map((item)=>{
 
-                 return   <BookCard 
-                bookname={item.name} 
-                bookauthor={item.author} 
-                dateofPublishing={item.dateOfPublishing} 
+                 return item.category=="Fiction" && <FictionBooks 
+                name={item.name} 
+                author={item.author} 
+                dateOfPublishing={item.dateOfPublishing} 
                 description={item.description}
                 price={item.price}
                 image={item.image}
                 />
 
             })
+            }
+
+        </div>
+            
            
 
          

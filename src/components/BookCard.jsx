@@ -2,9 +2,9 @@ export default function BookCard({bookname, bookauthor,dateofPublishing,descript
 {
 
 return(
-    <div className="flex flex-col justify-center items-center m-10 w-[24%] hover:cursor-pointer shadow-2xl rounded-2xl p-3">
+    <div className="flex flex-col justify-center items-center m-10 w-[300px] h-[60%] hover:cursor-pointer shadow-2xl rounded-2xl pt-3 p-2">
        
-        <img src={image} alt={bookname} className="w-[100%] border-2 border-white"/>
+        <img src={image} alt={bookname} className="w-[100%] border-2 h-50 border-white"/>
         <div>
              <h1 className="font-bold text-xl text-center bg-black h-8 text-white">{bookname}</h1>
          <ul>
