@@ -1,11 +1,11 @@
 import { useState } from "react"
 import books from "../utils/books.js"
 
-import FictionBooks from "./FictionBooks.jsx"
+import BookCard from "./BookCard.jsx"
 
 export default function Booklist()
 {
-    console.log(books)
+  
     const [booksData,setBooksData]=useState(books)
     return(
 
@@ -14,7 +14,7 @@ export default function Booklist()
             {
                 booksData.map((item)=>{
 
-                 return item.category=="Fiction" && <FictionBooks 
+                 return  <BookCard
                 name={item.name} 
                 author={item.author} 
                 dateOfPublishing={item.dateOfPublishing} 

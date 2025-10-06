@@ -1,8 +1,16 @@
+import { useNavigate } from "react-router-dom"
 
 
 const Categories = ({category,coverImage,coverBook,author}) => {
+const navigate=useNavigate()
+function handleclick()
+{
+navigate(`/${category}`)
+}
+
+
   return (
-    <div className="w-[200px] rounded-2xl h-[200px] justify-center items-center  flex flex-col m-1 p-1 border-2 border-white
+    <div onClick={()=>handleclick(category)} className="w-[200px]  cursor-pointer rounded-2xl h-[200px] justify-center items-center  flex flex-col m-1 p-1 border-2 border-white
      bg-black opacity-90">
         
         <div>

@@ -24,7 +24,7 @@ const dashboardbooks = [
     author: "Walter Isaacson",
   },
   {
-    category: "Philosophy",
+    category: "NonFiction",
     coverImage: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=400",
     coverBook: "Meditations",
     author: "Marcus Aurelius",
@@ -42,7 +42,7 @@ const dashboardbooks = [
     author: "Michelle Obama",
   },
   {
-    category: "Self Help",
+    category: "Scifi",
     coverImage: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400",
     coverBook: "Atomic Habits",
     author: "James Clear",

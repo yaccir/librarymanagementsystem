@@ -2,7 +2,7 @@
 import BookCard from "./BookCard.jsx"
 import books from "../utils/books.js";
 
-function FictionBooks( )
+function History( )
 {
 
                   return  (
@@ -12,7 +12,7 @@ function FictionBooks( )
                   
                   {
                     books.map((item)=>{
-                      return  item.category=="Fiction"&&  <BookCard
+                      return  item.category=="History"&&  <BookCard
                             bookname={item.name} 
                             bookauthor={item.author} 
                             dateofPublishing={item.dateOfPublishing} 
@@ -32,4 +32,4 @@ function FictionBooks( )
 
 
 }
-export default FictionBooks;
+export default History;
