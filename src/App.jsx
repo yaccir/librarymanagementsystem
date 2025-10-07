@@ -15,6 +15,7 @@ import Mystery from "./components/Mystery";
 import Romance from "./components/Romance";
 import Scifi from "./components/Scifi";
 import History from "./components/History";
+import SearchList from "./components/SearchList";
 
 
 export default function App()
@@ -112,6 +113,14 @@ const router=createBrowserRouter([
     element:<div>
       <Header/>
       <Romance/>
+    </div>
+  }
+    ,
+   {
+    path:"/searchlist",
+    element:<div>
+      <Header/>
+      <SearchList/>
     </div>
   }
 ]);
