@@ -128,7 +128,7 @@ const router=createBrowserRouter([
   return (
   
     // className="bg-[url('./src/images/background.png')] bg-cover bg-fixed bg-center h-screen w-full text-white  "
-    <div className=" bg-black text-white">
+    <div className="  font-sans bg-gray-900 text-white">
       <RouterProvider router={router}>
       <div className=" m-auto w-[85%] ">
     

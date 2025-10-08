@@ -2,22 +2,24 @@ export default function BookCard({bookname, bookauthor,dateofPublishing,descript
 {
 
 return(
-    <div className="flex border-2 border-white flex-col justify-center items-center m-10 w-[300px] h-[60%] hover:cursor-pointer shadow-2xl rounded-2xl pt-3 p-2">
+    <div className=" flex border-4  m-2  border-yellow-200 flex-col justify-center items-center p-2  w-[190px] h-[200 px] hover:cursor-pointer shadow-2xl rounded-2xl ">
        
-        <img src={image} alt={bookname} className="w-[100%] border-2 h-50 border-white"/>
-        <div>
-             <h1 className="font-bold text-xl text-center bg-black h-8 text-white">{bookname}</h1>
+        <img src={image} alt={bookname} className="w-[90px] border-2 h-[130px] border-white"/>
+        
+             <h1 className="text-center font-bold bg-black  text-white">Muhammad Yasir {bookname}</h1>
          <ul>
-            <li><p className="font-bold  text-blue-700">Author: {bookauthor}.</p></li>
-            <li><p className="font-bold  text-gray-700">Published: {dateofPublishing}.</p></li>
-            <li><p className="font-bold  text-gray-700">Description: {description}.</p></li>
-            <li>  <h3 className="font-bold  text-gray-700"> Price: ${price}/-</h3></li>
+                        <li><p className="text-white text-center">by Syed Shaheena Rashid Taploo {bookauthor}.</p></li>
+      
             </ul>   
+          <button  className='  w-30 h-7 hover:cursor-pointer
+     hover:text-gray-200 hover:bg-blue-700 rounded-2xl border-2 border-blue-500 text-white font-semibold '>View Details</button>
+    
+ 
              
             
           
 
-        </div>
+        
         
     </div>
 )
