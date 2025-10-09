@@ -1,29 +1,20 @@
 import { useNavigate } from "react-router-dom"
 
 
-const Categories = ({category,coverImage,coverBook,author}) => {
+const Categories = ({category}) => {
 const navigate=useNavigate()
 function handleclick()
 {
-navigate(`/${category}`)
+navigate(`/browsebooks/${category}`)
 }
 
 
+
   return (
-    <div onClick={()=>handleclick(category)} className="w-[200px]  cursor-pointer rounded-2xl h-[200px] justify-center items-center  flex flex-col m-1 p-1 border-2 border-white
-     bg-black opacity-90">
-        
-        <div>
-             <h2 className=" text-xl font-bold text-center">{category}</h2>
-            <img src={coverImage} alt="image" className="w-40 h-20 m-2 object-cover rounded-lg shadow-md" />
-
-        </div>
-        
-        <h2 className='font-bold text-center'>{coverBook}</h2>
-        <h3 className=''>by {author}</h3>
-
-    
-    </div>
+    <button onClick={()=>handleclick(category)} className='bg-blue-500 w-30 h-10 hover:cursor-pointer
+     hover:text-gray-200 hover:bg-blue-700 text-white font-semibold'>{category}
+           
+    </button>
   )
 }
 

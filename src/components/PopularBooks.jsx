@@ -5,7 +5,7 @@ function PopularBooks()
 
    
 return(
-    <div className="flex border-2 border-b-green-500 flex-wrap w-[0%] 
+    <div className="flex flex-wrap w-[100%] 
     justify-center">
         <div className=" w-[100%] flex flex-wrap justify-center items-center">
             {

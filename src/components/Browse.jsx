@@ -6,7 +6,7 @@ const Browse = () => {
 const navigate=useNavigate()
   function handleClick()
   {
-    navigate("/dashboard")
+    navigate("/browsebooks")
   }
 
   return (
