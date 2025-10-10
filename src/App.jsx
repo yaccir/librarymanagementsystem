@@ -1,22 +1,15 @@
 import Booklist from "./components/Booklist";
-import Categories from "./components/Categories";
+
 import Dashboard from "./components/Dashboard";
-import FictionBooks from "./components/FictionBooks";
+
 import Header from "./components/Header";
 
 import {createBrowserRouter,RouterProvider}from "react-router-dom";
-import Science from "./components/Science";
-import Technology from "./components/Technology";
-import Philosphy from "./components/NonFiction";
-import Fantasy from "./components/Fantasy";
-import Biography from "./components/Biography";
 
-import Mystery from "./components/Mystery";
-import Romance from "./components/Romance";
-import Scifi from "./components/Scifi";
-import History from "./components/History";
 import SearchList from "./components/SearchList";
 import { BrowseBooks } from "./components/BrowseBooks";
+import ViewDetails from "./components/ViewDetails";
+import Errorpage from "./components/Errorpage";
 
 
 export default function App()
@@ -60,6 +53,19 @@ const router=createBrowserRouter([
       <SearchList/>
     </div>
   }
+    ,
+   {
+  path: "/books/viewdetails/:bookname/:bookauthor",
+  element: <ViewDetails />
+}
+   ,
+   {
+  path: "/*",
+  element: <Errorpage/>
+}
+
+  
+  
 ]);
 
   return (
@@ -75,6 +81,7 @@ const router=createBrowserRouter([
       </div>
       </RouterProvider>
       
+    
     </div>
   )
 

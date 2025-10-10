@@ -17,8 +17,7 @@ export default function Booklist()
                  return  <BookCard
                 name={item.name} 
                 author={item.author} 
-                dateOfPublishing={item.dateOfPublishing} 
-                description={item.description}
+                description={item.about}
                 price={item.price}
                 image={item.image}
                 />

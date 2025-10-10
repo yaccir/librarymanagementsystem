@@ -21,7 +21,7 @@
     {
       name: "Beyond Reality",
       author: "Megan Lee",
-      category: "Non-Fiction",
+      category: "NonFiction",
       image: "https://picsum.photos/200/300?random=4",
     },
     {

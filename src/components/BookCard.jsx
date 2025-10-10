@@ -1,5 +1,18 @@
-export default function BookCard({bookname, bookauthor,dateofPublishing,description,price,image})
+import { useNavigate } from "react-router-dom"
+
+export default function BookCard({bookname, bookauthor,description,price,image})
 {
+
+    const navigate=useNavigate()
+function handleClick()
+{
+    
+      navigate(`/books/viewdetails/${bookname}/${bookauthor}`, {
+      state: { description, image }
+    });
+
+}
+
 
 return(
     <div className=" flex border-4  m-2  border-yellow-200 flex-col justify-center items-center p-2  w-[190px] h-[200 px] hover:cursor-pointer shadow-2xl rounded-2xl ">
@@ -11,7 +24,7 @@ return(
                         <li><p className="text-white text-center">by  {bookauthor}.</p></li>
       
             </ul>   
-          <button  className='  w-30 h-7 hover:cursor-pointer
+          <button onClick={handleClick} className='  w-30 h-7 hover:cursor-pointer
      hover:text-gray-200 hover:bg-blue-700 rounded-2xl border-2 border-blue-500 text-white font-semibold '>View Details</button>
     
  
