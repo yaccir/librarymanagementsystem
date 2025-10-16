@@ -32,8 +32,8 @@ export function BrowseBooks()
                                 <h1 className="text-white text-3xl text-center ">{item.category}</h1>
                                 <div className="flex justify-center items-center">
                                      <BookCard
-                                                                bookname={item.name} 
-                                                                bookauthor={item.author} 
+                                                                name={item.name} 
+                                                                author={item.author} 
                                                                 dateofPublishing={item.dateOfPublishing} 
                                                                 description={item.description}
                                                                 price={item.price}
@@ -68,8 +68,8 @@ export function BrowseBooks()
                 {
                  books.map((item)=>{
                       return  item.category==category&&  <BookCard
-                            bookname={item.name} 
-                            bookauthor={item.author} 
+                            name={item.name} 
+                            author={item.author} 
                             dateofPublishing={item.dateOfPublishing} 
                             description={item.description}
                             price={item.price}
