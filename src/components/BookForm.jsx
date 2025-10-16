@@ -8,8 +8,8 @@ import { useState } from "react";
 
 function BookForm()
 {
-
-    const [searchedbooks,setsearchedbooks]=useState([]);
+    const [selectedItems, setSelectedItems] = useState([]);
+   
 
     const [countdel,setcountdel]=useState([]);
         const dispatch=useDispatch();
@@ -26,9 +26,23 @@ function BookForm()
     handleSubmit,
     formState:{errors}}=useForm();
 
-        function handlechange()
+        function handlechange( value)
         {
-            
+            if(value==="")
+            {
+                setSelectedItems([])
+                return;
+            }
+                else
+            {
+         
+            const filterdata=bookarray.filter((item)=>
+            item.name.toLowerCase().includes(value.toLowerCase())
+            )
+                    console.log(filterdata);
+                    console.log(bookarray);
+                    setSelectedItems(filterdata);
+            }
         }
 
   function onsubmit(data)
@@ -131,8 +145,8 @@ function toggleSelect(index) {
 <div className="flex justify-center items-center border-2 border-amber-200 m-5">
         
 <input type="text" onChange={(e)=>{handlechange(e.target.value)}} className="border-2 border-amber-200 text-2xl bg-amber-50  text-black p-3 h-15 w-[600px] " placeholder="Search here......" />
-  <button  onClick={(e)=>{handlechange(e.target.value)}} className='bg-blue-500 w-40 h-15 hover:cursor-pointer hover:text-gray-200
-     hover:bg-blue-700 text-white font-semibold text-2xl '>Search-Book</button>
+  {/* <button  onClick={(e)=>{handlechange(e.target.value)}} className='bg-blue-500 w-40 h-15 hover:cursor-pointer hover:text-gray-200
+     hover:bg-blue-700 text-white font-semibold text-2xl '>Search-Book</button> */}
     </div>
 
 {console.log(countdel)}
@@ -156,7 +170,7 @@ function toggleSelect(index) {
     
 <div className="flex flex-wrap justify-center items-center " >
            {
-                    bookarray.map((item,index)=>{
+                    (selectedItems.length>0 ? selectedItems:bookarray).map((item,index)=>{
     
                      return  <div className=" m-2 w-[190px] h-[290px] flex flex-col " >
                       <div className="flex justify-around items-center" >
