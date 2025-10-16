@@ -10,6 +10,9 @@ import SearchList from "./components/SearchList";
 import { BrowseBooks } from "./components/BrowseBooks";
 import ViewDetails from "./components/ViewDetails";
 import Errorpage from "./components/Errorpage";
+import BookForm from "./components/BookForm";
+import { Provider } from "react-redux";
+import bookstore from "./utils/bookstore";
 
 
 export default function App()
@@ -57,6 +60,14 @@ const router=createBrowserRouter([
    {
   path: "/books/viewdetails/:bookname/:bookauthor",
   element: <ViewDetails />
+},
+{
+  path:"/bookform",
+  element: <div>
+    <Provider store={bookstore}>
+    <BookForm/>
+    </Provider>
+  </div>
 }
    ,
    {

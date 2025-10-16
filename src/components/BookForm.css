@@ -1,0 +1,43 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    color:black;
+    font-size: larger;
+    width:700px;
+    background-color: aqua;
+    margin: auto;
+}
+input{
+        margin: 5px;
+    border:2px solid black
+
+}
+p{
+    color: red;
+    font-size: 23px;
+}
+
+
+.input-border{
+    border:3px solid blue;
+    margin: 5px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    color:black;
+    font-size: larger;
+    width:700px;
+    background-color: aqua;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.submitinput{
+    margin-left:100px ;
+}
