@@ -5,7 +5,7 @@ export default function SearchList()
 {
     const location=useLocation();
     const newbooks=location.state?.newbooks||[];
-
+console.log(newbooks);
   
     return(
 

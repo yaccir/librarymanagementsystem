@@ -8,17 +8,28 @@ import { useState } from "react";
 
 function BookForm()
 {
+
+    const [searchedbooks,setsearchedbooks]=useState([]);
+
     const [countdel,setcountdel]=useState([]);
         const dispatch=useDispatch();
+    
 
     const bookarray=useSelector((store)=>{
         
         return store.booksdata.bookitems;
     })
 
+    
+
     const {register,
     handleSubmit,
     formState:{errors}}=useForm();
+
+        function handlechange()
+        {
+            
+        }
 
   function onsubmit(data)
   {
@@ -66,7 +77,7 @@ function toggleSelect(index) {
 
   return (
   
-        <div className="flex justify-center items-center  w-[100vw] m-auto" >
+        <div className="flex justify-center items-center  flex-wrap w-[100vw] m-auto" >
             {/* <h1 className="text-center text-3xl font-semibold text-green-400 border-2 border-gray-400 w-[25%] ">Add Book To The Library</h1> */}
     <form action="" onSubmit={handleSubmit(onsubmit)} className="form-container"> 
         
@@ -107,20 +118,20 @@ function toggleSelect(index) {
      <input type="file"  className="  input-border" {...register("image")} />
     </div>
     <div>
-        <input type="submit"  value={"Add-book"} className='bg-blue-500 submitinput w-30 h-10 hover:cursor-pointer hover:text-gray-200
+        <input type="submit"   value={"Add-book"} className='bg-blue-500 submitinput w-30 h-10 hover:cursor-pointer hover:text-gray-200
      hover:bg-blue-700 text-white font-semibold' />
     </div>
     </form>
 
-<div className="flex flex-wrap  m-auto mt-5 justify-center w-[50%] h-[100vh] overflow-y-auto items-center border-4 border-white rounded-2xl">
+<div className="flex flex-wrap  m-auto mt-5 justify-center lg:w-[50%] md:w-[90%] h-[100vh] overflow-y-auto items-center border-4 border-white rounded-2xl">
   
      <div>
 
 
 <div className="flex justify-center items-center border-2 border-amber-200 m-5">
         
-<input type="text" className="border-2 border-amber-200 text-2xl bg-amber-50  text-black p-3 h-15 w-[600px] " placeholder="Search here......" />
-  <button  className='bg-blue-500 w-40 h-15 hover:cursor-pointer hover:text-gray-200
+<input type="text" onChange={(e)=>{handlechange(e.target.value)}} className="border-2 border-amber-200 text-2xl bg-amber-50  text-black p-3 h-15 w-[600px] " placeholder="Search here......" />
+  <button  onClick={(e)=>{handlechange(e.target.value)}} className='bg-blue-500 w-40 h-15 hover:cursor-pointer hover:text-gray-200
      hover:bg-blue-700 text-white font-semibold text-2xl '>Search-Book</button>
     </div>
 
@@ -143,7 +154,7 @@ function toggleSelect(index) {
      </div>
   
     
-<div className="flex flex-wrap justify-center items-center" >
+<div className="flex flex-wrap justify-center items-center " >
            {
                     bookarray.map((item,index)=>{
     
