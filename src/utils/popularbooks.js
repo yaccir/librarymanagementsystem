@@ -1,55 +1,104 @@
-const popularbooks = [
+const meaningfulBooks = [
   {
-    name: "The Alchemist",
-    author: "Paulo Coelho",
-    dateOfPublishing: "1988-04-15",
-    description: "A spiritual journey of a shepherd boy who dreams of treasure.",
-    price: 19.99,
-    image: "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=400",
-    category: "Fiction",
-    viewDetails: `“The Alchemist” is one of the most inspiring and timeless novels ever written. Paulo Coelho weaves a simple yet profound tale about a young Andalusian shepherd named Santiago who dreams of finding treasure in the Egyptian pyramids. Guided by mystical omens and a deep desire for discovery, Santiago embarks on a journey that takes him far from home but closer to his soul’s purpose. Along the way, he meets an Englishman studying alchemy, a wise alchemist, and the love of his life, Fatima. Through challenges, doubts, and revelations, Santiago learns that true treasure lies not in gold but in realizing one’s destiny and following one’s heart. Coelho’s poetic storytelling and philosophical insights have made this book a global phenomenon, translated into more than 80 languages. Readers are reminded that every dream, no matter how small, is a spark of the divine within us. The novel’s universal message—that when you truly want something, the universe conspires to help you achieve it—continues to motivate readers worldwide. It’s a must-read for anyone seeking purpose, adventure, and faith in life’s mysterious journey.`
+    name: "Man’s Search for Meaning",
+    author: "Viktor E. Frankl",
+    dateOfPublishing: "1946-01-01",
+    description: "A Holocaust survivor explores how finding purpose gives strength in the darkest times.",
+    price: 15.99,
+    image: "https://m.media-amazon.com/images/I/61MdAtnimVL.jpg",
+    category: "Psychology",
+    viewDetails: `Viktor Frankl, a psychiatrist and Holocaust survivor, explains how humans can endure unimaginable suffering when they have a purpose. Drawing from his experiences in concentration camps, Frankl shows that meaning, not pleasure or power, is the deepest human motivation. The book teaches resilience, gratitude, and the power of mindset.`
   },
   {
-    name: "To Kill a Mockingbird",
-    author: "Harper Lee",
-    dateOfPublishing: "1960-07-11",
-    description: "A story of racial injustice and childhood innocence in the American South.",
-    price: 17.49,
-    image: "https://images.unsplash.com/photo-1528209392023-7e6e6f48f9a2?w=400",
-    category: "Classic",
-    viewDetails: `Harper Lee’s “To Kill a Mockingbird” remains one of the most powerful commentaries on race, justice, and morality in American literature. Set in the fictional town of Maycomb, Alabama, during the 1930s, the story is told through the eyes of young Scout Finch. Her father, Atticus Finch, a respected lawyer, defends Tom Robinson, a black man falsely accused of raping a white woman. Through Scout’s innocent yet observant narration, readers witness the harsh realities of prejudice, ignorance, and courage. The novel captures the loss of innocence as Scout and her brother Jem confront the unjust world around them. Atticus’s integrity and quiet heroism make him one of literature’s most beloved characters. Harper Lee’s masterful storytelling blends humor, warmth, and tragedy, creating a timeless narrative that challenges readers to reflect on empathy and human decency. The book’s moral message—that understanding others begins by “climbing into their skin and walking around in it”—resonates across generations. “To Kill a Mockingbird” is not merely a historical novel but a mirror held to society’s conscience.`
-  },
-  {
-    name: "1984",
-    author: "George Orwell",
-    dateOfPublishing: "1949-06-08",
-    description: "A chilling dystopian vision of a totalitarian future ruled by Big Brother.",
-    price: 16.99,
-    image: "https://images.unsplash.com/photo-1534080564583-6be75777b70a?w=400",
-    category: "Dystopian",
-    viewDetails: `George Orwell’s “1984” stands as a prophetic masterpiece exploring government surveillance, truth manipulation, and totalitarian control. The novel follows Winston Smith, a low-ranking member of the Party in Airstrip One (formerly Britain), where Big Brother’s watchful eyes and the Thought Police ensure absolute loyalty. Every citizen’s action and even thought are monitored, and history itself is rewritten to serve the Party’s agenda. Orwell’s bleak portrayal of a society stripped of individuality and freedom warns readers of the dangers of unchecked political power and propaganda. As Winston secretly rebels through forbidden love and thought, he learns that the cost of freedom can be devastating. Written in 1949, “1984” feels eerily relevant today, echoing themes of digital privacy, media distortion, and authoritarianism. Orwell’s creation of terms like “doublethink,” “thoughtcrime,” and “newspeak” has entered everyday vocabulary, symbolizing the manipulation of truth. “1984” is not just a dystopian story—it’s a moral and political warning, urging society to protect truth and human dignity at all costs.`
-  },
-  {
-    name: "The Great Gatsby",
-    author: "F. Scott Fitzgerald",
-    dateOfPublishing: "1925-04-10",
-    description: "A tragic tale of love, ambition, and the American Dream in the Jazz Age.",
-    price: 18.99,
-    image: "https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=400",
-    category: "Classic",
-    viewDetails: `“The Great Gatsby” by F. Scott Fitzgerald captures the glittering yet hollow world of the Roaring Twenties. The story follows Jay Gatsby, a mysterious millionaire known for his lavish parties, as told by his neighbor, Nick Carraway. Beneath the glamour of Long Island’s elite lies Gatsby’s deep yearning for Daisy Buchanan, the love he lost years ago. Through Fitzgerald’s poetic prose, the novel explores themes of obsession, wealth, illusion, and the corruption of the American Dream. Gatsby’s pursuit of Daisy becomes symbolic of humanity’s endless chase for fulfillment through materialism. The green light across the bay—always out of reach—remains one of literature’s most enduring symbols of hope and unattainable dreams. Fitzgerald’s sharp commentary on society’s moral decay makes “The Great Gatsby” a timeless reflection on love, identity, and ambition. Its haunting beauty and tragic ending ensure its place as one of the greatest novels ever written.`
-  },
-  {
-    name: "Pride and Prejudice",
-    author: "Jane Austen",
-    dateOfPublishing: "1813-01-28",
-    description: "A witty and romantic exploration of love, class, and pride.",
+    name: "The Power of Now",
+    author: "Eckhart Tolle",
+    dateOfPublishing: "1997-01-01",
+    description: "A guide to living fully in the present moment.",
     price: 14.99,
-    image: "https://images.unsplash.com/photo-1589998059171-988d887df646?w=400",
-    category: "Romance",
-    viewDetails: `Jane Austen’s “Pride and Prejudice” remains a masterpiece of wit, romance, and social observation. The novel centers around Elizabeth Bennet, a spirited young woman who refuses to marry for convenience. Her clash with the proud and reserved Mr. Darcy leads to misunderstandings, revelations, and ultimately, love. Set in the English countryside of the early 19th century, the story explores themes of class, reputation, and personal growth. Austen’s sharp humor and psychological insight make her characters enduringly real. Elizabeth’s intelligence and independence broke the mold of literary heroines, while Darcy’s transformation from arrogance to humility showcases Austen’s belief in moral development. Beyond its romantic surface, “Pride and Prejudice” critiques the limitations placed on women and the societal obsession with wealth and status. Two centuries later, its dialogue, charm, and commentary still resonate deeply with readers around the world.`
+    image: "https://m.media-amazon.com/images/I/81yUt9MLvwL.jpg",
+    category: "Self-Help",
+    viewDetails: `Tolle explains how most human suffering comes from dwelling on the past or worrying about the future. The book teaches mindfulness, awareness, and inner peace. It's a spiritual and practical manual for reducing stress and reconnecting with yourself.`
   },
-  // 15 more books...
+  {
+    name: "Atomic Habits",
+    author: "James Clear",
+    dateOfPublishing: "2018-10-16",
+    description: "A powerful system for building good habits and breaking bad ones.",
+    price: 20.49,
+    image: "https://m.media-amazon.com/images/I/81wgcld4wxL.jpg",
+    category: "Productivity",
+    viewDetails: `James Clear reveals how tiny daily changes lead to extraordinary results. He breaks down habit formation into simple steps based on psychology and neuroscience. The book is practical, motivating, and life-changing for anyone wanting discipline or self-growth.`
+  },
+  {
+    name: "The Subtle Art of Not Giving a F*ck",
+    author: "Mark Manson",
+    dateOfPublishing: "2016-09-13",
+    description: "A counterintuitive guide to living a good life.",
+    price: 17.99,
+    image: "https://m.media-amazon.com/images/I/71QKQ9mwV7L.jpg",
+    category: "Self-Help",
+    viewDetails: `Mark Manson argues that life’s struggles give it meaning, and we must choose what truly deserves our time and energy. The book blends humor with deep philosophy about responsibility, values, and emotional maturity.`
+  },
+  {
+    name: "Sapiens: A Brief History of Humankind",
+    author: "Yuval Noah Harari",
+    dateOfPublishing: "2011-01-01",
+    description: "A bold look at how humans evolved, ruled, and shaped the modern world.",
+    price: 22.49,
+    image: "https://m.media-amazon.com/images/I/713jIoMO3UL.jpg",
+    category: "History",
+    viewDetails: `Harari explains how humans became the planet’s dominant species through imagination, shared beliefs, and cooperation. The book explores science, culture, religion, economics, and the future of humanity in a gripping narrative.`
+  },
+  {
+    name: "The Four Agreements",
+    author: "Don Miguel Ruiz",
+    dateOfPublishing: "1997-01-01",
+    description: "Ancient Toltec wisdom for living a peaceful and honorable life.",
+    price: 13.49,
+    image: "https://m.media-amazon.com/images/I/91AfEwKjDgL.jpg",
+    category: "Spirituality",
+    viewDetails: `The book lays out four simple life principles: be impeccable with words, don’t take things personally, don’t make assumptions, and always do your best. These agreements reduce emotional pain and bring clarity and freedom.`
+  },
+  {
+    name: "The 7 Habits of Highly Effective People",
+    author: "Stephen R. Covey",
+    dateOfPublishing: "1989-08-15",
+    description: "A classic guide to personal and professional success.",
+    price: 18.49,
+    image: "https://m.media-amazon.com/images/I/71Koyhv2bML.jpg",
+    category: "Leadership",
+    viewDetails: `Covey’s seven habits teach responsibility, priority management, teamwork, communication, and continuous improvement. It is one of the most influential self-improvement books ever written.`
+  },
+  {
+    name: "The Monk Who Sold His Ferrari",
+    author: "Robin Sharma",
+    dateOfPublishing: "1996-01-01",
+    description: "A fable about achieving success through inner peace and values.",
+    price: 16.99,
+    image: "https://m.media-amazon.com/images/I/61OByUf1TfL.jpg",
+    category: "Motivation",
+    viewDetails: `A burned-out lawyer discovers a Himalayan monastery that teaches the secrets of mindfulness, purpose, and joyful living. It’s simple yet inspiring, filled with life lessons on discipline and happiness.`
+  },
+  {
+    name: "Rich Dad Poor Dad",
+    author: "Robert T. Kiyosaki",
+    dateOfPublishing: "1997-04-01",
+    description: "A life-changing perspective on money, assets, and financial freedom.",
+    price: 14.49,
+    image: "https://m.media-amazon.com/images/I/81N9xAIkohL.jpg",
+    category: "Finance",
+    viewDetails: `Kiyosaki compares lessons learned from his educated but poor father and his wealthy mentor. The book teaches financial IQ, investing, building assets, and escaping the rat race.`
+  },
+  {
+    name: "Meditations",
+    author: "Marcus Aurelius",
+    dateOfPublishing: "180-01-01",
+    description: "Stoic wisdom from a Roman emperor on calmness, virtue, and self-discipline.",
+    price: 12.99,
+    image: "https://m.media-amazon.com/images/I/81DFDGzHZqL.jpg",
+    category: "Philosophy",
+    viewDetails: `Aurelius wrote these personal notes to strengthen his mind and character. The book teaches emotional control, humility, gratitude, and resilience. It’s one of the most meaningful philosophical works ever created.`
+  }
 ];
 
-export default popularbooks;
+export default meaningfulBooks;

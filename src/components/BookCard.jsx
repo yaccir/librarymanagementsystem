@@ -17,7 +17,7 @@ function handleClick()
 
 return(
     <div className=" flex border-4  m-2  border-yellow-200 flex-col justify-center items-center p-2  w-[190px] h-[200 px] hover:cursor-pointer shadow-2xl rounded-2xl ">
-       
+    
         <img src={image} alt={name} className="w-[90px] border-2 h-[130px] border-white"/>
         
              <h1 className="text-center font-bold bg-black  text-white"> {name}</h1>

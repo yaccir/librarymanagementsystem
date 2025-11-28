@@ -1,66 +1,64 @@
+const browsebooks = [
+  {
+    name: "To Kill a Mockingbird",
+    author: "Harper Lee",
+    category: "Fiction",
+    image: "https://covers.openlibrary.org/b/id/8225261-L.jpg",
+  },
+  {
+    name: "Sapiens: A Brief History of Humankind",
+    author: "Yuval Noah Harari",
+    category: "History",
+    image: "https://covers.openlibrary.org/b/id/8467261-L.jpg",
+  },
+  {
+    name: "Clean Code",
+    author: "Robert C. Martin",
+    category: "Technology",
+    image: "https://covers.openlibrary.org/b/id/9251962-L.jpg",
+  },
+  {
+    name: "The Subtle Art of Not Giving a F*ck",
+    author: "Mark Manson",
+    category: "NonFiction",
+    image: "https://covers.openlibrary.org/b/id/11153267-L.jpg",
+  },
+  {
+    name: "Harry Potter and the Sorcerer's Stone",
+    author: "J.K. Rowling",
+    category: "Fantasy",
+    image: "https://covers.openlibrary.org/b/id/7884866-L.jpg",
+  },
+  {
+    name: "The Diary of a Young Girl",
+    author: "Anne Frank",
+    category: "Biography",
+    image: "https://covers.openlibrary.org/b/id/10523369-L.jpg",
+  },
+  {
+    name: "Dune",
+    author: "Frank Herbert",
+    category: "Scifi",
+    image: "https://covers.openlibrary.org/b/id/8100920-L.jpg",
+  },
+  {
+    name: "Gone Girl",
+    author: "Gillian Flynn",
+    category: "Mystery",
+    image: "https://covers.openlibrary.org/b/id/8679551-L.jpg",
+  },
+  {
+    name: "Pride and Prejudice",
+    author: "Jane Austen",
+    category: "Romance",
+    image: "https://covers.openlibrary.org/b/id/8081536-L.jpg",
+  },
+  {
+    name: "A Brief History of Time",
+    author: "Stephen Hawking",
+    category: "Science",
+    image: "https://covers.openlibrary.org/b/id/240726-L.jpg",
+  },
+];
 
- const browsebooks = [
-    {
-      name: "The Silent Truth",
-      author: "John Carter",
-      category: "Fiction",
-      image: "https://picsum.photos/200/300?random=1",
-    },
-    {
-      name: "Ancient Empires",
-      author: "Olivia Stone",
-      category: "History",
-      image: "https://picsum.photos/200/300?random=2",
-    },
-    {
-      name: "Future Tech",
-      author: "Dr. Alan Miles",
-      category: "Technology",
-      image: "https://picsum.photos/200/300?random=3",
-    },
-    {
-      name: "Beyond Reality",
-      author: "Megan Lee",
-      category: "NonFiction",
-      image: "https://picsum.photos/200/300?random=4",
-    },
-    {
-      name: "Land of Dreams",
-      author: "Chris Howard",
-      category: "Fantasy",
-      image: "https://picsum.photos/200/300?random=5",
-    },
-    {
-      name: "Life of Legends",
-      author: "Sarah Blake",
-      category: "Biography",
-      image: "https://picsum.photos/200/300?random=6",
-    },
-    {
-      name: "Dark Universe",
-      author: "Tom Richards",
-      category: "Scifi",
-      image: "https://picsum.photos/200/300?random=7",
-    },
-    {
-      name: "Hidden Crimes",
-      author: "Emily Ward",
-      category: "Mystery",
-      image: "https://picsum.photos/200/300?random=8",
-    },
-    {
-      name: "Love & Letters",
-      author: "Julia Brooks",
-      category: "Romance",
-      image: "https://picsum.photos/200/300?random=9",
-    },
-    {
-      name: "Quantum Secrets",
-      author: "Dr. James Frost",
-      category: "Science",
-      image: "https://picsum.photos/200/300?random=10",
-    },
-  ];
-
-
-  export default browsebooks;
+export default browsebooks;
