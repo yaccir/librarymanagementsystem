@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-
+//Home component to display home button
 const Home = () => {
   const navigate=useNavigate()
   function handleclick()

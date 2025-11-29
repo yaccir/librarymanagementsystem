@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-
+//Errorpage component to display 404 error page
 export default function Errorpage()
 {
 

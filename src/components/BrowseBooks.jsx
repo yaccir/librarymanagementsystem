@@ -6,7 +6,7 @@ import browsebooks from "../utils/browsebooks"
 import Categories from "./Categories"
 import dashboardbooks from "../utils/dashboardbooks"
 
-
+//BrowseBooks component to display books by category
 export function BrowseBooks()
 {
 
@@ -21,7 +21,7 @@ export function BrowseBooks()
     
    
     return(
-        
+        //main container
        <div >
             {
 
@@ -31,12 +31,12 @@ export function BrowseBooks()
                            return <div className="w-[250px] m-3 h-[320px] border-2 flex flex-col justify-center items-center border-yellow-300">
                                 <h1 className="text-white text-3xl text-center ">{item.category}</h1>
                                 <div className="flex justify-center items-center">
+                                 
                                      <BookCard
+                                     
                                                                 name={item.name} 
                                                                 author={item.author} 
-                                                                dateofPublishing={item.dateOfPublishing} 
                                                                 description={item.description}
-                                                                price={item.price}
                                                                 image={item.image}
                                                     />
                                 </div>
@@ -67,13 +67,16 @@ export function BrowseBooks()
             <div className="flex flex-wrap justify-center">
                 {
                  books.map((item)=>{
+                       {console.log(item)}
                       return  item.category==category&&  <BookCard
                             name={item.name} 
                             author={item.author} 
-                            dateofPublishing={item.dateOfPublishing} 
+                           
                             description={item.description}
-                            price={item.price}
+                           
                             image={item.image}
+
+                            rating={item.rating}
                 />
                  
 

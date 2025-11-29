@@ -2,7 +2,7 @@ import { useState } from "react";
 import books from "../utils/books";
 import { useNavigate } from "react-router-dom";
 import "./Search.css"
-
+//Search component to handle book search functionality
 function Search()
 {
   const navigate=useNavigate()
@@ -10,13 +10,13 @@ function Search()
   const [searchedbook, setSearchedbook]=useState("");
   const [newbooklist,setnewbooklist]=useState([]);
    
-
+//function to handle input change and search
   function handleinput()
   {
     handlechange(searchedbook);
 
   }
-
+//function to filter books based on search input
   function handlechange(e)
   {
    
@@ -35,7 +35,7 @@ function Search()
   console.log(newsearchedlist);
  
 
-
+//navigating to search results page with filtered books
  async function nav()
  {
   await setnewbooklist(newsearchedlist);

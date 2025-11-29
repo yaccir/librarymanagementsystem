@@ -13,6 +13,7 @@ import Errorpage from "./components/Errorpage";
 import BookForm from "./components/BookForm";
 import { Provider } from "react-redux";
 import bookstore from "./utils/bookstore";
+import Footer from "./components/Footer";
 
 
 export default function App()
@@ -24,6 +25,7 @@ const router=createBrowserRouter([
     element:<div>
       <Header/>
       <Dashboard/>
+      <Footer/>
     </div>
   },
   {
@@ -31,6 +33,7 @@ const router=createBrowserRouter([
     element:<div>
       <Header/>
       <Booklist/>
+      <Footer/>
     </div>
   },
    {
@@ -38,6 +41,7 @@ const router=createBrowserRouter([
     element:<div>
       <Header/>
          <BrowseBooks/>
+         <Footer/>
     </div>
   },
   {
@@ -46,6 +50,7 @@ const router=createBrowserRouter([
       <Header/>
      
      <BrowseBooks/>
+     <Footer/>
     </div>
   }
     ,
@@ -54,25 +59,38 @@ const router=createBrowserRouter([
     element:<div>
       <Header/>
       <SearchList/>
+      <Footer/>
     </div>
   }
     ,
    {
   path: "/books/viewdetails/:bookname/:bookauthor",
-  element: <ViewDetails />
+  element: 
+<div>
+    <ViewDetails />
+    <Footer/>
+</div>
+
+  
 },
 {
   path:"/bookform",
   element: <div>
     <Provider store={bookstore}>
     <BookForm/>
+    <Footer/>
     </Provider>
+
   </div>
 }
    ,
    {
   path: "/*",
-  element: <Errorpage/>
+  element:
+  <div>
+  <Errorpage/>
+  <Footer/>
+  </div>
 }
 
   

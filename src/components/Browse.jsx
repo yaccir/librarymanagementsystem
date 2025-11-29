@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 const Browse = () => {
 
-
+//navigation hook
 const navigate=useNavigate()
   function handleClick()
   {

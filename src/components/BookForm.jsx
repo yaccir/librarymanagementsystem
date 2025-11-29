@@ -5,7 +5,7 @@ import { addBookItem, clearbookStore,deletebooklist, removeBookItem } from "../u
 import BookCard from "./BookCard";
 import { useState } from "react";
 import Header from "./Header";
-import books from "../utils/books";
+
 
 
 function BookForm()
@@ -62,16 +62,16 @@ function convTo64(file) {
   });
 }
 
-// onsubmit ko async banao
+// submit function
 async function onsubmit(data) {
   try {
     
 
-    // assume data.image is a FileList or array coming from input[type=file]
+ 
     if (data.imagefile && data.imagefile.length > 0) {
       // convert first file to base64
       const base64 = await convTo64(data.imagefile[0]);
-      // attach base64 to data (name it kuch bhi, e.g., imageBase64)
+      // attach base64 to data 
      
       data.image = base64;
 
@@ -87,6 +87,8 @@ async function onsubmit(data) {
   }
 }
 
+//delete function
+
     function handledelete(item,index)
     {
         dispatch(removeBookItem([index,item]))
@@ -94,6 +96,8 @@ async function onsubmit(data) {
 
     }
 
+
+    //delete selected books
 
     function deleteSelected(){
 
@@ -105,17 +109,18 @@ async function onsubmit(data) {
         setcountdel([])
         console.log("i am called");
     }
+    //delete all books
     function deleteAll(){
 
         dispatch(clearbookStore())
 
     }
 
-
+    //unselect all books
     function unselectAll(){
             setcountdel([])
     }
-
+//toggle select function
 function toggleSelect(index) {
   
   setcountdel((prev) =>
@@ -135,7 +140,7 @@ function toggleSelect(index) {
     
             </div>
 <div className="flex justify-center items-center border-2 border-white   flex-wrap w-[100vw] m-auto" >
-
+{/* form start */}
         <form action="" onSubmit={handleSubmit(onsubmit)} className="form-container"> 
             <h1 className="text-center text-3xl font-semibold  border-2 border-orange-400 
     w-[60%] m-auto mt-5 mb-5 rounded-2xl p-2">Add Book To The Library</h1>
@@ -237,7 +242,7 @@ h-[800px] overflow-y-auto items-center border-4 border-white rounded-2xl">
 
 
 <div className="flex justify-center items-center border-2 border-amber-200 m-5">
-        
+    {/* //search bar     */}
 <input type="text" onChange={(e)=>{handlechange(e.target.value)}} className="border-2 border-amber-200 text-2xl bg-amber-50  text-red-600 font-bold p-3 h-15 w-[600px] " placeholder="Search Books to Delete here......" />
   {/* <button  onClick={(e)=>{handlechange(e.target.value)}} className='bg-blue-500 w-40 h-15 hover:cursor-pointer hover:text-gray-200
      hover:bg-blue-700 text-white font-semibold text-2xl '>Search-Book</button> */}
@@ -261,7 +266,7 @@ h-[800px] overflow-y-auto items-center border-4 border-white rounded-2xl">
 
      </div>
   
-    
+    {/* //book cards display */}
 <div className="flex flex-wrap justify-center items-center " >
            {
                     (selectedItems.length>0 ? selectedItems:bookarray).map((item,index)=>{
@@ -278,8 +283,8 @@ h-[800px] overflow-y-auto items-center border-4 border-white rounded-2xl">
                         <BookCard
                         name={item.name} 
                         author={item.author} 
-                        description={item.about}
-                        price={item.price}
+                        description={item.description}
+                        rating={item.rating}
                         image={item.image}
                     />
                         

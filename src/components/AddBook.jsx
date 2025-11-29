@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
-
+//importing navigation hook from react-router-dom
 const AddBook = () => {
-
+//navigation hook
   const navigate=useNavigate();
   function handleclick(){
     navigate("/bookform")

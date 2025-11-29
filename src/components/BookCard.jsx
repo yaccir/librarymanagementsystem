@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom"
 import "./BookCard.css"
 
-export default function BookCard({name, author,description,price,image})
+    //BookCard component to display individual book details
+export default function BookCard({name, author,description,rating,price,image})
 {
 
     const navigate=useNavigate()
@@ -9,7 +10,7 @@ function handleClick()
 {
     
       navigate(`/books/viewdetails/${name}/${author}`, {
-      state: { description, image }
+      state: { description, image,rating }
     });
 
 }
@@ -22,7 +23,7 @@ return(
         
              <h1 className="text-center font-bold bg-black  text-[13px] text-white"> {name}</h1>
          <ul>
-                        <li><p className="text-white  text-author text-center">by  {author}.</p></li>
+                        <li><p className="text-white  text-author text-center">by  {author}</p></li>
       
             </ul>   
           <button onClick={handleClick} className='  w-30 h-7 hover:cursor-pointer
@@ -30,9 +31,7 @@ return(
     
  
              
-            
-          
-
+  
         
         
     </div>

@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom"
 import BookCard from "./BookCard.jsx"
-
+//SearchList component to display list of searched books
 export default function SearchList()
 {
     const location=useLocation();

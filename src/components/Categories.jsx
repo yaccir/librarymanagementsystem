@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
 
-
+    //Categories component to display individual category button
 const Categories = ({category}) => {
 const navigate=useNavigate()
 function handleclick()

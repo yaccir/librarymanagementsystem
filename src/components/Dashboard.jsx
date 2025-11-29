@@ -2,6 +2,7 @@ import dashboardbooks from "../utils/dashboardbooks";
 
 import Categories from "./Categories";
 import PopularBooks from "./PopularBooks";
+//Dashboard component to display main dashboard with categories and popular books
 function Dashboard()
 {
 
