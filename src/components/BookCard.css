@@ -1,4 +1,8 @@
 .text-author{
-    font-size: 15px;
+    font-size: 12px;
     color: turquoise;
+}
+.bookcard{
+    height: 230px;
+    width: 190px;
 }

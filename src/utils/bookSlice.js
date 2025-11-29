@@ -131,7 +131,8 @@ const bookSlice=createSlice({
     },
     reducers:{
         addBookItem:(state,action)=>{
-                        state.bookitems.push(action.payload);
+                        state.bookitems.unshift(action.payload);
+
 
                                      
         },

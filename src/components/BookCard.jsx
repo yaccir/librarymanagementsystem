@@ -16,13 +16,13 @@ function handleClick()
 
 
 return(
-    <div className=" flex border-4  m-2  border-yellow-200 flex-col justify-center items-center p-2  w-[190px] h-[200 px] hover:cursor-pointer shadow-2xl rounded-2xl ">
+    <div className=" flex border-4  m-2  border-yellow-200 flex-col justify-center items-center p-2  bookcard hover:cursor-pointer shadow-2xl rounded-2xl ">
     
-        <img src={image} alt={name} className="w-[90px] border-2 h-[130px] border-white"/>
+        <img src={image} alt={name} className="w-[80px] border-2 h-[120px] border-white"/>
         
-             <h1 className="text-center font-bold bg-black  text-white"> {name}</h1>
+             <h1 className="text-center font-bold bg-black  text-[13px] text-white"> {name}</h1>
          <ul>
-                        <li><p className="text-white text-author text-center">by  {author}.</p></li>
+                        <li><p className="text-white  text-author text-center">by  {author}.</p></li>
       
             </ul>   
           <button onClick={handleClick} className='  w-30 h-7 hover:cursor-pointer

@@ -182,9 +182,13 @@ function toggleSelect(index) {
           {errors.ratings && <p>{errors.ratings.message}</p>}
      <input type="number"  className="  input-border" {...register("ratings",{
         required:"Book Ratings Cannot be Empty!!!",
-        minLength:{value:1,message:"Minimum Length Should be 5 leters !!!"},
-        maxLength:{value:1,message:"Maximum Lenght Should be 20 leters !!!"},
-        pattern:{value:"/^[0-9]+$/",message:"Enter Rating in numbers only 1 to 5 !!!"}
+        minLength:{value:1,message:"Enter rating only between 0 to 5  !!!"},
+        maxLength:{value:1,message:"Enter rating only between 0 to 5  !!!"},
+        // pattern:{value:"/^[0-9]+$/",message:"Enter Rating in numbers only 1 to 5 !!!"}
+       pattern: {
+  value: /^[0-5]$/,
+  message: "Enter rating only between 0 to 5 !!!"
+}
 
 
      })} />
@@ -215,16 +219,19 @@ function toggleSelect(index) {
     </div>
      <div className=" flex flex-col">
         <label htmlFor=""className=" text-2xl font-bold text-gray-700 " > Book-Cover-Photo: </label>
-          {errors.image && <p>{errors.image.message}</p>}
-     <input type="file" accept="image/*" className="  input-border" {...register("imagefile")} />
+          {errors.imagefile && <p>{errors.imagefile.message}</p>}
+     <input type="file" accept="image/*" className="  input-border" {...register("imagefile",{
+        required:"Book cover image not selected!!!",})} />
     </div>
     <div>
-        <input type="submit"   value={"Add-book"} className='bg-blue-500 submitinput w-30 h-10 hover:cursor-pointer hover:text-gray-200
+        <input type="submit"   value={"Add-book"} className='bg-blue-500 
+        submitinput w-30 h-10 hover:cursor-pointer hover:text-gray-200
      hover:bg-blue-700 text-white font-semibold' />
     </div>
     </form>
 
-<div className="flex flex-wrap  m-auto mt-0 justify-center lg:w-[50%] md:w-[90%] h-[100vh] overflow-y-auto items-center border-4 border-white rounded-2xl">
+<div className="flex flex-wrap  m-auto mt-0 justify-center lg:w-[50%] md:w-[90%] 
+h-[800px] overflow-y-auto items-center border-4 border-white rounded-2xl">
   
      <div>
 
