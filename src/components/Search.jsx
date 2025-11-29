@@ -2,6 +2,7 @@ import { useState } from "react";
 import books from "../utils/books";
 import { useNavigate } from "react-router-dom";
 import "./Search.css"
+import { set } from "react-hook-form";
 //Search component to handle book search functionality
 function Search()
 {
@@ -19,10 +20,15 @@ function Search()
 //function to filter books based on search input
   function handlechange(e)
   {
-   
-   setSearchedbook(e)
+  
+    async function setvalue()
+    {
+        await setSearchedbook(e);
+    }
+    setvalue();
+ 
 
-   
+  
      const newsearchedlist= books.filter((item)=>{
          
               return (
