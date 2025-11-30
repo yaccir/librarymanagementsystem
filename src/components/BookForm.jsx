@@ -283,7 +283,7 @@ h-[800px] overflow-y-auto items-center border-4 border-white rounded-2xl">
                         <BookCard
                         name={item.name} 
                         author={item.author} 
-                        description={item.description}
+                        description={item.de}
                         rating={item.rating}
                         image={item.image}
                     />

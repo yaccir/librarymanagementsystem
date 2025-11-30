@@ -1,5 +1,6 @@
 // Footer.jsx
 export default function Footer() {
+    // Footer component for the library management system
   return (
     <footer className="w-full bg-gray-900 text-white py-4 mt-10">
       <div className="text-center">
