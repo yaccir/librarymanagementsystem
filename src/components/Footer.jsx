@@ -8,7 +8,7 @@ export default function Footer() {
         </p>
 
         <a
-          href="https://github.com/yaccir"
+          href="https://github.com/yaccir/librarymanagementsystem"
           target="_blank"
           className="text-blue-400 hover:text-blue-300 underline mt-2 inline-block"
         >
